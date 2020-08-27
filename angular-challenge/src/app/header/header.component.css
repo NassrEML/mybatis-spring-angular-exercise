@@ -1,0 +1,26 @@
+p {
+    margin: 0;
+}
+
+.toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    justify-content: space-around;
+}
+
+.nav-wrap {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-wrap>a {
+    color: black;
+}
