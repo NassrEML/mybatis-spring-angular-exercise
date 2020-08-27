@@ -1,1 +1,1 @@
-# mybatis-sporing-angular-exercise
+# mybatis-spring-angular-exercise
