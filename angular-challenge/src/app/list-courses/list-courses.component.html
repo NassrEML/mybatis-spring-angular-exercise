@@ -4,8 +4,8 @@
             <tr>
                 <th scope="col" *ngIf="sorted == true" (click)="sort($event)">Titulo ▼</th>
                 <th scope="col" *ngIf="sorted == false" (click)="sort($event)">Titulo ▲</th>
-                <th scope="col">Nivel</th>
-                <th scope="col">Horas</th>
+                <th style="width:120px" scope="col">Nivel</th>
+                <th style="width:80px" scope="col">Horas</th>
             </tr>
         </thead>
         <tbody>
@@ -19,4 +19,5 @@
     <div class="card-footer pb-0 pt-3">
         <jw-pagination [items]="items" [pageSize]="pageSize" (changePage)="onChangePage($event)"></jw-pagination>
     </div>
+    <button routerLink="/addCourse">Añadir cursos</button>
 </div>

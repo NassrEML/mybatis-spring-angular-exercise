@@ -10,6 +10,8 @@ import { Course } from '../model/course.interface'
 
 export class ListCoursesComponent implements OnInit {
 
+  pos: number;
+
   items: Course[] = [];
 
   pageOfItems: Array<Course>;
@@ -22,20 +24,24 @@ export class ListCoursesComponent implements OnInit {
     this.courseService.getAllCourses()
       .then(courses => {
         this.items = courses.filter(course => course.availability == true);
-      })
+      });
   }
 
   ngOnInit(): void {
   }
 
   public sort(event) {
+    this.pos = this.items.indexOf(this.pageOfItems[0]);
+
     if (this.sorted == false) {
-      this.items.sort((c1, c2) => (c1.title < c2.title) ? 1 : -1)
+      this.items.sort((c1, c2) => (c1.title < c2.title) ? 1 : -1);
       this.sorted = true;
     } else {
       this.items.sort((c1, c2) => (c1.title > c2.title) ? 1 : -1);
       this.sorted = false;
     }
+
+    this.pageOfItems = this.items.slice(this.pos, this.pos + this.pageSize);
   }
 
   onChangePage(pageOfItems: Array<Course>) {
