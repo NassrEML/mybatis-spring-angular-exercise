@@ -10,7 +10,8 @@ import java.util.List;
 @Mapper
 public interface CourseRepository {
 
-    @Insert("INSERT INTO courses (id,availability,teacher_id,title,difficulty,hours) VALUES (UUID(),#{availability},#{teacher_id},#{title},#{difficulty},#{hours})")
+    @Insert("INSERT INTO courses (id,availability,teacher_id,title,difficulty,hours) " +
+            "VALUES (UUID(),#{availability},#{teacher_id},#{title},#{difficulty},#{hours})")
     int insertCourse(Course course);
 
     @Select("SELECT * FROM courses")

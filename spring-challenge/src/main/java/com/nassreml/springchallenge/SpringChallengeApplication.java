@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootApplication
 public class SpringChallengeApplication {
 
-	public static void main(String[] args) {
+	private static void main(String[] args) {
 		new AnnotationConfigApplicationContext(AppConfig.class);
 		SpringApplication.run(SpringChallengeApplication.class, args);
 	}

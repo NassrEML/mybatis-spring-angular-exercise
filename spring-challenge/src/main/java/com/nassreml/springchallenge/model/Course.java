@@ -17,6 +17,7 @@ public class Course {
     @NotNull(message = "Teacher Id cannot be null")
     private String teacher_id;
 
+    @NotNull(message = "Title cannot be null")
     @Size(min = 5, max = 200, message = "Title must be between 5 and 200 characters")
     private String title;
 

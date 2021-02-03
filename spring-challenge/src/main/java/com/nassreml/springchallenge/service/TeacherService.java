@@ -1,8 +1,6 @@
 package com.nassreml.springchallenge.service;
 
-import com.nassreml.springchallenge.model.Course;
 import com.nassreml.springchallenge.model.Teacher;
-import com.nassreml.springchallenge.repository.CourseRepository;
 import com.nassreml.springchallenge.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
